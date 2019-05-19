@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlightSurety</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+</head>
+
+<body>
+
+
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">FlightSurety</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+
+    <main class="container">
+
+<div id= "successMassage" class="alert alert-success center" style="display:none;">
+
+</div>
+<div id= "errorMassage" class="alert alert-danger center" style="display:none;">
+
+    </div>
+</br>
+<div class="w3-container">
+  
+    <div class="w3-row">
+      <a href="javascript:void(0)" onclick="openService(event, 'OperationalStatus');" id="defaultOpen">
+                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Operational Status</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openService(event, 'Passenger');">
+        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Passenger</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openService(event, 'Airline');">
+        <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Airline</div>
+      </a>
+
+      
+    </div>
+  
+    <div id="Passenger" class="w3-container service clickedTab " style="display:none">
+
+        <div class="row top-20">
+            <table>
+                <tbody>
+
+                    <tr>
+                        <td colspan="2">
+                                <div>
+                                        <label for="flight"><strong>Purchase Insurance </strong></label>
+                                </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                            <td>
+                                    Passenger Address : 
+                            </td>
+                        <td >
+                                <div>
+                                        <select id="passengers"></select>
+                                </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>            
+                        <div>
+                                <label for="flight">Flight:</label>
+                        </div>
+                    </td>
+                    <td>
+                            <div>
+                                    <select id="flights"></select>
+                               </div>
+                    </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                               Amount (ETH) : 
+
+                        </td>
+                        <td>
+                                <input type="text" id="insurance" /> <button class="btn btn-primary" id="purchase">Purchase</button>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                            <td colspan="2">
+                                    <label class="form"><strong>Flight:</strong></label>
+                            </td>
+                        </tr>
+<tr>
+<td>
+    Flight number:
+</td>
+<td>
+    <input type="text" id="flight-number"> 
+</td>
+</tr>
+<tr>
+<td>
+        Address:
+</td>
+<td>
+        <input type="text" id="flight-address"> 
+</td>
+</tr>
+<tr>
+    <td>
+            Timestamp:
+    </td>
+    <td>
+            <input type="text" id="flight-time"><btn class="btn btn-primary" id="submit-oracle">Check Flight Status</btn>
+    </td>
+</tr>
+
+                            <tr>
+                                <td colspan="2">
+                                        <label for="flight"><strong>Insurance</strong></label>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                                Passenger Address : 
+                                        </td>
+                                        <td>
+                                                <input type="text" id="passenger-address2">  <button class="btn btn-primary" id="show">show Funds</button> <button class="btn btn-primary" id="withdraw">Withdraw Funds</button>  <button class="btn btn-primary" id="claim">Claim Funds</button>
+
+                                        </td>
+                                    </tr>
+
+                            
+
+                             
+                                    </tbody>
+                    </table>
+        </div>
+    </div>
+  
+    <div id="Airline" class="w3-container service clickedTab" style="display:none">
+            <div class="row top-20">
+
+            <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                    <label class="form"><strong>Register Airline:</strong></label>
+
+                                </td>
+                                
+                                </tr>
+      
+                                <tr>
+                                    <td>
+                                            Airline address:
+                                    </td>
+                                    <td>
+                                            <input type="text" id="airline-address">                                             <btn class="btn btn-primary" id="register-airline">Register Airline</btn>
+
+                                        
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                        <td colspan="2">
+                                                <label class="form"><strong>Fund registered Airline</strong></label>
+
+                                    </td>
+                                </tr>
+                                <tr>
+              
+                                    <td colspan="2">
+                                            <select id="airlines"></select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+<td>
+        Fund(ETH):
+</td>
+<td>
+    
+        <input type="text" id="airline-fund"/> 
+        <btn class="btn btn-primary" id="fund-airline">Fund Airline</btn>
+
+</td>
+                                </tr>
+                                
+        
+        </tbody>
+        </table>
+                         
+        
+    </div>
+    </div>
+  
+
+
+    <div id="OperationalStatus" class="w3-container service clickedTab" style="display:none">
+        <div id="display-wrapper" class="top-20">
+        </div>
+    </div>
+  
+  </div>
+
+
+
+
+
+
+       
+    </main>
+    <div class="footer">
+          </div>
+    <script>
+    function openService(evt, serviceName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("service");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+    }
+    document.getElementById(serviceName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-border-red";
+    }
+
+    document.getElementById("defaultOpen").click();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+body {
+    /*background-image: url('flight.jpg'); /* Source: iStockPhoto */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin-top: 150px;
+    margin-bottom: 250px;
+    height: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.top-20 {
+    margin-top: 20px;
+}
+
+h5 {
+    color: #999999;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.field {
+    font-weight: bold;
+    text-align: right;
+}
+
+.field-value {
+    color: #0e7fa8;
+}
+
+label.form {
+    font-size: 14px;
+    margin-right: 20px;
+}
+input {
+    margin-right: 30px;
+}
+
+.tab{
+    padding: 50px;
+    background-color: #000;
+    opacity: 0.8;
+    margin: 40px;
+    /* border: 10px; */
+    border-style: solid;
+    border-width: 3px;
+    border-color: #1e4266;
+}
+
+.clickedTab{
+    background-color: rgb(249, 249, 249);
+    
+}
+
+.top-20 {
+    /* margin-top: 20px; */
+    /* margin-left: 20px; */
+    margin: 20px;}
+
+    .w3-border-red, .w3-hover-border-red:hover {
+        border-color: #007bff!important;
+    }
+
+    .bg-dark {
+        background-color: #0062cc!important;
+    }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #e0e0e0;
+        color: white;
+        text-align: center;
+        height: 220px;
+        border-top: 12px solid #efefef;
+     }
+
+
+     .alert{
+        min-height: 50px;
+        /* width: 70%; */
+        /* vertical-align: middle; */
+        /* align-items: center; */
+        /* align-content: center; */
+        margin: auto;
+        width: 50%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 2;
+        margin-bottom: 50px;
+     }
+
+     .center {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+      }
